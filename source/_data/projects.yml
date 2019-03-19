@@ -1,0 +1,29 @@
+- name: "Project 1"
+  description: "Ipsam fugiat nemo inventore modi aperiam error, tempore placeat officiis! Laboriosam tenetur dignissimos repellat Laboriosam tenetur dignissimos repellat Laboriosam tenetur dignissimos repellat"
+  tech: "Node.js | Express | MongoDB | Semantic UI"
+  code: "https://github.com/niamurrell/value-app"
+  demo: "https://valuemax.herokuapp.com/"
+  image: "https://images.unsplash.com/photo-1550016681-60a1d9d23bf7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1344&q=80"
+  startDate: "October 2016"
+  endDate: "December 2016"
+  visible: true
+
+- name: "Project 2"
+  description: "Ipsam fugiat nemo inventore modi aperiam error, tempore placeat officiis! Laboriosam tenetur dignissimos repellat Laboriosam tenetur dignissimos repellat Laboriosam tenetur dignissimos repellat"
+  tech: "Node.js | Express | MongoDB | Semantic UI"
+  code: "https://github.com/niamurrell/value-app"
+  demo: "https://valuemax.herokuapp.com/"
+  image: "https://images.unsplash.com/photo-1551350952-b53990fa38b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+  startDate: "October 2016"
+  endDate: "December 2016"
+  visible: true
+
+- name: "Project 3"
+  description: "Ipsam fugiat nemo inventore modi aperiam error, tempore placeat officiis! Laboriosam tenetur dignissimos repellat Laboriosam tenetur dignissimos repellat Laboriosam tenetur dignissimos repellat"
+  tech: "Node.js | Express | MongoDB | Semantic UI"
+  code: "https://github.com/niamurrell/value-app"
+  demo: "https://valuemax.herokuapp.com/"
+  image: "https://images.unsplash.com/photo-1551415923-58aba9efeb2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80"
+  startDate: "October 2016"
+  endDate: "December 2016"
+  visible: true

@@ -1,21 +1,21 @@
-<div class="navbar-fixed">
-    <nav class="green darken-4" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">
-                Brent Codes
+<nav class="navbar is-success is-fixed-top" style="background-color: #2C6700;">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/" style="font-weight:600; font-size: 24px;">
+            Brent Codes
+        </a>
+        <span class="navbar-burger burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </div>
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+            <% for (var i in theme.menu){ %>
+            <a href="<%- url_for(theme.menu[i]) %>" class="navbar-item">
+                <%= i %>
             </a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="#">Resume</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <% } %>
         </div>
-    </nav>
-</div>
+    </div>
+</nav>
