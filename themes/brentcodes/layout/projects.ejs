@@ -1,12 +1,11 @@
-<%- partial('_partial/homepage-hero')%>
-<section class="section">
+<section class="section has-margin-top-20">
     <div class="container">
         <div class="row">
-            <div class="columns">
+            <div class="columns is-multiline">
                 <% site.posts.forEach(function(post){ %>
-                <% if (post.type === 'project' && post.isFeatured) { %>
-                <div class="column is-one-third">
-                    <div class="card large">
+                <% if (post.type === 'project') { %>
+                <div class="column is-one-quarter">
+                    <div class="card medium">
                         <div class="card-image">
                             <figure class="image">
                                 <img src="<%- post.image %>" alt="Image">
@@ -14,7 +13,7 @@
                         </div>
                         <div class="card-content">
                             <p>
-                                <%- truncate(post.content, {length: 250, omission: '...'}) %>
+                                <%- truncate(post.content, {length: 350, omission: '...'}) %>
                             </p>
                         </div>
                         <footer class="card-footer">
@@ -27,7 +26,8 @@
                                 </a>
                             </p>
                             <p class="card-footer-item">
-                                <a class="button is-fullwidth is-primary is-outlined" href="<%- url_for(post.path) %>">
+                                <a class="button is-fullwidth is-primary is-outlined" href="<%- url_for(post.path) %>
+">
                                     <span class="icon">
                                         <i class="fas fa-beer"></i>
                                     </span>
@@ -36,6 +36,7 @@
                             </p>
                         </footer>
                     </div>
+
                 </div>
                 <% } %>
                 <% }) %>
