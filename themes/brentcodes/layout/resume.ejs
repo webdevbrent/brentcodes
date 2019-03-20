@@ -1,0 +1,111 @@
+<div class="container">
+    <section class="section has-margin-top-20">
+        <div class="columns  is-vcentered has-text-centered has-padding-5">
+            <div class="column is-2" style="background-color: #E5E4D7;">
+                <p class="is-size-5">
+                    <i class="fas fa-male"></i>
+                    <%- site.data.myInfo.myName %>
+                </p>
+            </div>
+            <div class="column is-3" style="background-color: #E5E4D7;">
+                <p class="is-size-5">
+                    <i class="fas fa-home"></i>
+                    <%- site.data.myInfo.myAddress %>
+                </p>
+
+            </div>
+            <div class="column is-3" style="background-color: #E5E4D7;">
+                <p class="is-size-5">
+                    <i class="fas fa-mobile-alt"></i>
+                    <%- site.data.myInfo.myPhoneNumber %>
+                </p>
+            </div>
+            <div class="column is-4" style="background-color: #E5E4D7;">
+                <p class="is-size-5">
+                    <i class="fas fa-envelope"></i>
+                    <%- site.data.myInfo.myEmail %>
+                </p>
+            </div>
+        </div>
+    </section>
+    <nav class="tabs has-success is-centered is-fullwidth is-large">
+        <div class="container">
+            <ul>
+                <li class="tab is-size-6-mobile is-active has-text-success" onclick="openTab(event,'Projects')"><a>Projects</a></li>
+                <li class="tab is-size-6-mobile" onclick="openTab(event,'WorkHistory')"><a>Work History</a></li>
+                <li class="tab is-size-6-mobile" onclick="openTab(event,'Education')"><a>Education</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container section">
+        <div id="Projects" class="content-tab">
+            <% site.posts.forEach(function(post){ %>
+            <% if (post.type === 'project' && post.isFeatured) { %>
+            <div class="columns is-vcentered has-text-centered">
+                <div class="column is-12">
+                    <h4 class="is-size-4" style="background-color: #FFCF79;">
+                        <%- post.title %>
+                    </h4>
+                    <p>
+                        <%- post.startDate %> -
+                        <%- post.endDate %>
+                    </p>
+                    <div class="markdown-body has-padding-25" style="background-color: #E5E4D7;">
+                        <%- post.content %>
+                    </div>
+                    <p class="has-text-white" style="background-color: #2C6700;">
+                        <%- tagcloud(post.tags,{min_font: 16, max_font: 35, amount: 999, color: true, start_color: 'white', end_color: 'black',}) %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+            <% }) %>
+        </div>
+        <div id="WorkHistory" class="content-tab" style="display:none">
+            <% site.posts.forEach(function(post){ %>
+            <% if (post.type === 'workhistory') { %>
+            <div class="columns is-vcentered has-text-centered">
+                <div class="column is-12">
+                    <h4 class="is-size-4" style="background-color: #FFCF79;">
+                        <%- post.title %>
+                    </h4>
+                    <p>
+                        <%- post.startDate %> -
+                        <%- post.endDate %>
+                    </p>
+                    <div class="markdown-body has-padding-25" style="background-color: #E5E4D7;">
+                        <%- post.content %>
+                    </div>
+                    <p class="has-text-white" style="background-color: #2C6700;">
+                        <%- tagcloud(post.tags,{min_font: 16, max_font: 35, amount: 999, color: true, start_color: 'white', end_color: 'black',}) %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+            <% }) %>
+        </div>
+        <div id="Education" class="content-tab" style="display:none">
+            <% site.posts.forEach(function(post){ %>
+            <% if (post.type === 'educationhistory') { %>
+            <div class="columns is-vcentered has-text-centered">
+                <div class="column is-12">
+                    <h4 class="is-size-4" style="background-color: #FFCF79;">
+                        <%- post.title %>
+                    </h4>
+                    <p>
+                        <%- post.startDate %> -
+                        <%- post.endDate %>
+                    </p>
+                    <div class="markdown-body has-padding-25" style="background-color: #E5E4D7;">
+                        <%- post.content %>
+                    </div>
+                    <p class="has-text-white" style="background-color: #2C6700;">
+                        <%- tagcloud(post.tags,{min_font: 16, max_font: 35, amount: 999, color: true, start_color: 'white', end_color: 'black',}) %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+            <% }) %>
+        </div>
+    </div>
+</div>

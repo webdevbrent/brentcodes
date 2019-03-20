@@ -1,6 +1,9 @@
 ---
 title: {{ title }}
 date: {{ date }}
+category:
 tags:
-featured_img:
+type:
+isFeatured: false
+layout:
 ---
